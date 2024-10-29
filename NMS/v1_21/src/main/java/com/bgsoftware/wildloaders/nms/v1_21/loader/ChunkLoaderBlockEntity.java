@@ -144,6 +144,7 @@ public final class ChunkLoaderBlockEntity extends BlockEntity implements ITileEn
     private void updateName(EntityHologram hologram, String line) {
         hologram.setHologramName(line
                 .replace("{0}", this.cachedPlacerName)
+                .replace("{loader_name}", chunkLoader.getLoaderData().getName())
                 .replace("{1}", daysAmount + "")
                 .replace("{2}", hoursAmount + "")
                 .replace("{3}", minutesAmount + "")
